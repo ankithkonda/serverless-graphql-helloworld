@@ -1,0 +1,16 @@
+
+service: graphql-api
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  profile: ankith.aws.serverless.admin
+
+functions:
+  graphql:
+    handler: handler.graphql
+    events:
+      - http:
+          path: graphql
+          method: get
+
