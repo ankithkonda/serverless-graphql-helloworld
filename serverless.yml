@@ -4,6 +4,7 @@ service: graphql-api
 provider:
   name: aws
   runtime: nodejs8.10
+  stage: dev
   profile: ankith.aws.serverless.admin
 
 functions:
@@ -29,10 +30,13 @@ functions:
 
 plugins:
   - serverless-webpack
+  - serverless-offline
 
 custom:
   webpack:
     webpackConfig: 'webpack.config.js'   # Name of webpack configuration file
     includeModules: true   # Node modules configuration for packaging
     packager: 'yarn'   # Packager that will be used to package your external modules
+  serverless-offline:
+    port: 4000
 

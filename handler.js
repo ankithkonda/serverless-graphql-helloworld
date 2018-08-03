@@ -24,8 +24,9 @@ const server = new ApolloServer({
 exports.graphql = server.createHandler();
 
 exports.playgroundHandler = lambdaPlayground({
-  endpoint: '/dev/graphql',
-})
+    endpoint:'/dev/graphql',
+  })
+
 
 
 exports.hello = (event, context, callback) => {
