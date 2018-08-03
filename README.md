@@ -4,6 +4,10 @@
 
 ## Steps to get it up and running - 
 
+#### Optional: if you don't have serverless already
+```bash
+npm install -g serverless
+```
 
 ### 1) Install dependencies 
 
