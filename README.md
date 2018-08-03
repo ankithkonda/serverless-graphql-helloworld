@@ -1,6 +1,6 @@
 # serverless-graphql-helloworld
 
-# Basic hello world setup
+#### Basic hello world setup
 
 ## Steps to get it up and running - 
 
@@ -8,9 +8,7 @@
 ### 1) Install dependencies 
 
 ```bash
-
-yarn
-
+yarn install
 ```
 
 ### 2) Create IAM user with admin privilages
@@ -25,17 +23,13 @@ Call this whatever you want, but make sure you keep keys safe
 ### 4) Replace the profile in serverless.yml with the profile you created 
 
 ```yaml
-
 provider:
   ...
   profile: ankith.aws.serverless.admin <- replace this with your aws cli profile
-
 ```
 
 ### 5) enjoy 
 
 ```bash
-
 sls deploy
-
 ```
