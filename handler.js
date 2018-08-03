@@ -28,7 +28,7 @@ exports.playgroundHandler = lambdaPlayground({
 })
 
 
-exports.hello = (event, AudioContext, callback) => {
+exports.hello = (event, context, callback) => {
 
   let arry = ["a","b","c","d"]
 
