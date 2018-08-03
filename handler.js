@@ -12,19 +12,40 @@ const typeDefs = gql`
 // Provide resolver functions for your schema fields
 const resolvers = {
     Query: {
-      hello: () => 'Hello world!',
+      hello: (root, args, context) => {
+        
+
+        let arry = ["a","b","c","d"]
+
+        const newarr = arry.map(item=>{
+          return item+"WOO!! "
+        })
+
+        return newarr.toString();
+
+      },
     },
 };
 
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    context: (request) => {
+
+      // get the user token from the headers
+      const apikey = request.event.headers.api_key || '';
+      
+      if (apikey !== "mycoolapikey") throw new Error('Invalid API Key'); 
+
+      return { apikey }
+      
+    },
 });
     
 exports.graphql = server.createHandler();
 
 exports.playgroundHandler = lambdaPlayground({
-    endpoint:'/dev/graphql',
+    endpoint:process.env.IS_OFFLINE?'/graphql':'/dev/graphql',
   })
 
 
