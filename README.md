@@ -33,3 +33,14 @@ provider:
 ```bash
 sls deploy
 ```
+
+## Run Local - 
+
+instead of sls deploy, run 
+
+```bash
+sls offline start
+```
+
+runs in localhost:4000, for playground, remove "/dev" from graphql endpoint
+
