@@ -5,11 +5,17 @@
   "main": "handler.js",
   "dependencies": {
     "apollo-server-lambda": "^2.0.0-xrc.11",
+    "aws-lambda": "^0.1.2",
     "aws-sdk": "^2.136.0",
     "eslint-plugin-react": "^7.4.0",
-    "graphql": "^0.13.2"
+    "graphql": "^0.13.2",
+    "graphql-playground-middleware-lambda": "^1.7.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.16.4",
+    "webpack-node-externals": "^1.7.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

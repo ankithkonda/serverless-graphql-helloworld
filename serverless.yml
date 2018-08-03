@@ -13,4 +13,26 @@ functions:
       - http:
           path: graphql
           method: get
+  playground:
+    handler: handler.playgroundHandler
+    events:
+    - http:
+        path: playground
+        method: get
+        cors: true
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'   # Name of webpack configuration file
+    includeModules: true   # Node modules configuration for packaging
+    packager: 'yarn'   # Packager that will be used to package your external modules
 
