@@ -39,6 +39,9 @@ sls deploy
 ```
 ### Api Key
 
+rename config.yml.example to config.yml  
+
+
 for testing purposes i set the api_key header to mycoolapikey, so to test in playground make sure to include the following in the http headers -
 
 ```json
