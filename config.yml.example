@@ -1,0 +1,5 @@
+KEYS:
+  API_KEY: mycoolapikey
+
+CONFIG:
+  DB_NAME: mycooldbname

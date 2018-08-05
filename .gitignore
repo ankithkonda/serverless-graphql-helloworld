@@ -2,3 +2,4 @@
 node_modules
 .webpack
 .webpack/*
+config.yml

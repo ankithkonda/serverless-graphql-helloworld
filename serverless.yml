@@ -6,6 +6,8 @@ provider:
   runtime: nodejs8.10
   stage: dev
   profile: ankith.aws.serverless.admin
+  environment:
+    API_KEY: ${file(config.yml):KEYS.API_KEY}
 
 functions:
   graphql:
@@ -17,10 +19,10 @@ functions:
   playground:
     handler: handler.playgroundHandler
     events:
-    - http:
-        path: playground
-        method: get
-        cors: true
+      - http:
+          path: playground
+          method: get
+          cors: true
   hello:
     handler: handler.hello
     events:

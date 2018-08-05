@@ -34,8 +34,9 @@ const server = new ApolloServer({
 
       // get the user token from the headers
       const apikey = request.event.headers.api_key || '';
+
       
-      if (apikey !== "mycoolapikey") throw new Error('Invalid API Key'); 
+      if (apikey !== process.env.API_KEY) throw new Error('Invalid API Key'); 
 
       return { apikey }
       
