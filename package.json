@@ -5,7 +5,7 @@
   "main": "handler.js",
   "dependencies": {
     "apollo-server-lambda": "^2.0.0-xrc.11",
-    "aws-lambda": "^0.1.2",
+    "aws-lambda": "^1.0.5",
     "aws-sdk": "^2.136.0",
     "eslint-plugin-react": "^7.4.0",
     "graphql": "^0.13.2",
